@@ -138,6 +138,3 @@ class Oware:
         self.game2D()
         return str(self.board)
 
-
-# gudlucsam
-# mustaphatidooyussif
