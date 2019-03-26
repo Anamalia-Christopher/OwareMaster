@@ -39,8 +39,17 @@ class Oware:
                     position=0
 
                 self.board[position] +=1
-                if 6*self.player<position<(6*(self.player+1)-1) and self.board[position]==4:
-                    self.score[self.player] +=4
+
+
+
+                if self.board[position]==4:
+                    if 6*self.player<position<(6*(self.player+1)-1) or ((marbles-1)==i):
+                        self.score[self.player] +=4
+                    else:
+                        self.__next__()
+                        self.score[self.player] += 4
+                        self.__next__()
+
                     self.board[position] = 0
 
             print(self.board, self.player)
